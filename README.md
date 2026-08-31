@@ -5,7 +5,7 @@
 A dependency-free conformance suite for single-use token redemption. Point it at your store, and it answers a question your existing tests almost certainly do not: *can two concurrent callers redeem the same credential?*
 
 ```bash
-npm i -D single-use
+npm i -D @yasirdora/single-use
 ```
 
 ---
@@ -42,7 +42,7 @@ The `WHERE` is the compare, the `SET` is the swap, and the database performs bot
 ## Quick start
 
 ```ts
-import { checkSingleUse } from "single-use";
+import { checkSingleUse } from "@yasirdora/single-use";
 
 const report = await checkSingleUse({
   createStore: () => ({

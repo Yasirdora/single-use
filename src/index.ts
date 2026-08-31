@@ -2,7 +2,7 @@
  * single-use — prove your one-time credentials are actually one-time.
  *
  * ```ts
- * import { checkSingleUse } from "single-use";
+ * import { checkSingleUse } from "@yasirdora/single-use";
  *
  * const report = await checkSingleUse({
  *     createStore: () => ({
