@@ -1,0 +1,69 @@
+{
+  "name": "single-use",
+  "version": "0.1.0",
+  "description": "Prove your one-time credentials are actually one-time. A dependency-free conformance suite for single-use token redemption — OAuth codes, password resets, magic links, invites, idempotency keys.",
+  "keywords": [
+    "single-use",
+    "one-time",
+    "otp",
+    "magic-link",
+    "oauth",
+    "idempotency",
+    "race-condition",
+    "concurrency",
+    "atomic",
+    "conformance",
+    "testing",
+    "security"
+  ],
+  "license": "MIT",
+  "author": "Ysr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasirdora/single-use.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yasirdora/single-use/issues"
+  },
+  "homepage": "https://github.com/Yasirdora/single-use#readme",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && node scripts/postbuild.mjs",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.build.cjs.json",
+    "clean": "node scripts/clean.mjs",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run test",
+    "prepublishOnly": "npm run clean && npm run verify && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
