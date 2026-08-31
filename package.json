@@ -1,6 +1,6 @@
 {
   "name": "@yasirdora/single-use",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Prove your one-time credentials are actually one-time. A dependency-free conformance suite for single-use token redemption \u2014 OAuth codes, password resets, magic links, invites, idempotency keys.",
   "keywords": [
     "single-use",
