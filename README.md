@@ -1,5 +1,10 @@
 # single-use
 
+[![CI](https://github.com/Yasirdora/single-use/actions/workflows/release.yml/badge.svg)](https://github.com/Yasirdora/single-use/actions/workflows/release.yml)
+[![npm version](https://img.shields.io/npm/v/@yasirdora/single-use.svg?style=flat)](https://www.npmjs.com/package/@yasirdora/single-use)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 **Prove your one-time credentials are actually one-time.**
 
 A dependency-free conformance suite for single-use token redemption. Point it at your store, and it answers a question your existing tests almost certainly do not: *can two concurrent callers redeem the same credential?*
